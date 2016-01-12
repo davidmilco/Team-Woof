@@ -98,6 +98,6 @@ app.get('/*', function(req, res){
       res.sendFile(path.join(__dirname + '/../' + req.url));
 });
 
-app.listen(app.get('port'), function(){
+app.listen(process.env.PORT || app.get('port'), function () {
 	console.log('Node app is running on port', app.get('port'));
 });
